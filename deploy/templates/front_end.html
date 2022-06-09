@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head >
+  <meta charset="UTF-8">
+  <title>TITLE</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto&display=swap" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+
+
+body > div {
+	/*background-color: #dbe2e8;*/
+	background-image: url("https://as1.ftcdn.net/v2/jpg/03/70/44/04/1000_F_370440475_gwx52alVbG3p5GXrKF1InDe7vy5GrF9O.jpg");
+	background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+	font-family: "Oswald", sans-serif;
+	padding-top: 60px;
+	padding-bottom: 120px;
+	color: #07395c;
+}
+
+.section-contact {
+    padding-top: 40px;
+    padding-bottom: 85px ;
+    padding-right: 125px;
+    padding-left: 125px;
+		background-color: #fff;
+}
+
+.section-contact .header-section .title {
+	position: relative;
+	text-transform: uppercase;
+    font-weight: 700;
+    font-size:50px;
+}
+
+.section-contact .header-section .title .dot {
+    display: inline-block;
+	position: absolute;
+    bottom: 8px;
+    width: 8px;
+    height: 8px;
+    margin-left: 3px;
+    background-color: #df383f;
+}
+
+.section-contact .header-section .description {
+	font-family: "Roboto", sans-serif;
+	color: #2a6287;
+}
+
+.section-contact .header-section .big-title {
+	position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%,70%);
+    font-size: 120px;
+    font-weight: 700;
+    opacity: 0.15;
+}
+
+.section-contact .form-contact {
+
+}
+
+.section-contact .form-contact .single-input {
+	position: relative;
+    margin-top: 40px;
+}
+
+.section-contact .form-contact .single-input i {
+	position: absolute;
+    top: 5px;
+    left: 15px;
+    color: #de3842;
+}
+
+.section-contact .form-contact .single-input input,
+.section-contact .form-contact .single-input textarea {
+	width: 100%;
+    border: none;
+    border-bottom: 2px solid #07395c;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+		transition: border .3s;
+}
+
+.section-contact .form-contact .single-input input::placeholder,
+.section-contact .form-contact .single-input textarea::placeholder {
+	color: rgba(7, 57, 92, .3);
+}
+
+.section-contact .form-contact .single-input input:focus,
+.section-contact .form-contact .single-input textarea:focus {
+	border-color: #df383f;
+}
+
+.section-contact .form-contact .single-input textarea {
+	height: 150px;
+	min-height: 50px;
+}
+
+.section-contact .form-contact .submit-input input {
+	margin-top: 40px;
+    padding: 15px 50px;
+    background-color: #de3842;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    transition: background-color .3s;
+}
+.result{
+	padding-top: 30px;
+}
+
+.section-contact .form-contact .submit-input input:hover {
+	background-color: #07395c;
+}
+
+@media (max-width: 575.99px) {
+	.section-contact {
+	    padding: 80px 60px;
+	}
+
+	.section-contact .header-section .title {
+	    font-size: 40px;
+	}
+
+	.section-contact .header-section .big-title {
+		font-size: 80px;
+	}
+
+	.section-contact .header-section .description {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+	.section-contact {
+	    padding: 80px 60px;
+	}
+
+	.section-contact .header-section .title {
+	    font-size: 45px;
+	}
+
+	.section-contact .header-section .big-title {
+		font-size: 100px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.99px) {
+	.section-contact {
+	    padding: 80px 60px;
+	}
+
+	.section-contact .header-section .title {
+	    font-size: 50px;
+	}
+
+	.section-contact .header-section .big-title {
+		font-size: 100px;
+	}
+}
+
+/* --------------------------------------------*/
+div.cn {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+div.inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 75px;
+    -webkit-transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);   
+  
+}
+</style>
+  
+</head>
+
+<body>
+ <div>
+	<div class="container">
+		<div class="section-contact">
+
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-10 col-xl-8">
+					<div class="header-section text-center">
+						<h1 class="title" style="text-align:center">Cyber Attack Detection 
+						</h1>							
+					</div>
+				</div>
+			</div>
+
+
+			<div class="back">
+				<!-- Main Input For Receiving Query to our ML -->
+				<form class="form-group form-contact" action="{{ url_for('predict')}}"method="post">
+						
+					<div class="row">
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Duration</label>
+								<input type="number" class="space form-control" step="0.01" name="Duration" placeholder="Duration" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Service</label>
+								<input type="text" class="space form-control" step="0.01" name="Service" placeholder="Service" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Flag</label>
+								<input type="text" class="space form-control" step="0.01" name="Flag" placeholder="Flag" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Source Bytes</label>
+								<input type="number" class="space form-control" step="0.01" name="design complexity " placeholder="Source Bytes" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Destination Bytes</label>
+								<input type="number" class="space form-control" step="0.01" name="Destination Bytes" placeholder="Destination Bytes" required="required" />
+		
+							</div>
+						</div><div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Count</label>
+								<input type="number" class="space form-control" step="0.01" name="Count" placeholder="Count" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Server Count</label>
+								<input type="number" class="space form-control" step="0.01" name="Server Count" placeholder="Server Count" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Destination Host Count</label>
+								<input type="number" class="space form-control" step="0.01" name="Destination Host Count" placeholder="Destination Host Count" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="single-input">
+								<label class="white"  for="">Destination Host Server Count</label>
+								<input type="number" class="space form-control" step="0.01" name="Destination Host Server Count" placeholder="Destination Host Server Count" required="required" />
+							</div>
+						</div>
+						<div class="col-md-6 cn">
+							 <div  class=" inner">
+                       				<!-- <button  onclick="toggle_div_fun('sectiontohide');" class="btn btn-lg btn-info">Reset</button>
+				                    <button type="submit"  onclick="toggle_div_fun2('sectiontohide');"  class="btn btn-lg btn-success" style="margin-left: 25px;">Detect</button> -->
+									<button  onclick="toggle_div_fun('sectiontohide');" type="submit" class="btn btn-success ">Detect</button>
+				                </div>
+						</div>
+						<!-- <div class="col-md-6 ">
+							<div class="col-md-3">
+							<div class="submit-input text-center">
+								<input type="reset" name="reset" value="reset">
+							</div>
+						</div>
+							<div class="col-md-3">
+							<div class="submit-input text-center">
+								<button type="submit" class="btn btn-success ">Detect</button>
+							</div>
+						</div> -->
+
+					</div>
+
+
+    			</form>
+			</div>
+   		
+
+<div  style="background:white;padding:2% 40%;" id="sectiontohide">
+   {{ prediction_text }}
+</div>
+ </div>
+</div>
+</div>
+
+</body>
+ <script type="text/javascript"> 
+	function toggle_div_fun(id) {
+  var divelement = document.getElementById(id)
+    divelement.style.background = 'skyblue';
+}
+</script> 
+</html>

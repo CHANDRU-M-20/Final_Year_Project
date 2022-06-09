@@ -1,0 +1,155 @@
+
+ 
+
+
+<!DOCTYPE html>
+<html style="background-color:black">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TITLE</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style>
+.back{
+
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+.white{
+color:white;
+}
+.nspace{
+margin:15px 15px 30px 30px;
+padding:9px 10px;
+background: rgb(0, 242, 255);
+width:500px
+}
+.space{
+margin:10px 30px;
+padding:10px 10px;
+background: rgb(0, 234, 255);
+width:500px
+
+}
+.gap{
+padding:10px 20px;
+}
+
+form{
+    width: 80%;
+  margin: 0 auto;
+}
+label,
+input {
+	text-align:center;
+  display: inline-block;
+}
+
+label {
+  width: 30%;
+ 
+  text-align: right;
+}
+
+label+input {
+  width: 30%;
+ 
+  margin: 0 30% 0 4%;
+}
+
+
+input+input {
+  float: right;
+}
+</style>
+  
+</head>
+
+<body style="background-color:black;background-image=url("large.png")">
+    <div class="rag">
+ <div>
+ <div class="jumbotron">
+ <h1 style="text-align:center;color: black;">Cyber Attack Detection </h1>
+ 
+ </div>
+<div class="back">
+    
+    <form class="form-group" action="{{ url_for('predict')}}"method="post">
+      
+  <div class="row">
+  <div class="gap col-md-6 ">
+
+
+  <label class="white"  for="">Duration</label>
+  <input type="number" class="space form-control"  name="Duration" placeholder="Duration" required="required" />
+
+  
+  <label class="white"  for="">Service</label>
+  <input type="number" class="space form-control"  name="Service" placeholder="Service" required="required" />
+  
+
+
+
+  <label class="white"  for="">Flag</label>
+  <input type="number" class="space form-control"  name="Flag" placeholder="Flag" required="required" />
+  
+  
+
+  <label class="white"  for="">Source Bytes</label>
+  <input type="number" class="space form-control"  name="design complexity " placeholder="Source Bytes" required="required" /><br>
+  
+        <label class="white"  for="">Destination Bytes</label>
+  <input type="number" class="space form-control"  name="Destination Bytes" placeholder="Destination Bytes" required="required" />
+  
+  
+  <label class="white"  for="">Count</label>
+  <input type="number" class="space form-control"  name="Count" placeholder="Count" required="required" /><br>
+  
+
+
+  <label class="white"  for="">Server Count</label>
+  <input type="number" class="space form-control"  name="Server Count" placeholder="Server Count" required="required" />
+  
+
+
+  
+  <label class="white"  for="">Destination Host Count</label>
+  <input type="number" class="space form-control"  name="Destination Host Count" placeholder="Destination Host Count" required="required" /><br>
+  
+
+
+
+  <label class="white"  for="">Destination Host Server Count</label>
+  <input type="number" class="space form-control"  name="Destination Host Server Count" placeholder="Destination Host Server Count" required="required" /><br>
+  
+
+
+
+
+  </div>
+
+
+</div>
+
+<div style="padding:2% 35%">
+  <button type="submit" class="btn btn-success btn-block" style="align-center;background-color:red;width:350px;padding:20px">Detect</button>  
+</div>
+      
+    </form>
+</div>
+   <br>
+   <br>
+
+<div  style="color:white;background-color:black;padding:2% 40%">
+   The type of attack will be predicted here!
+</div>
+ </div>
+</div>
+
+</body>
+</html>
